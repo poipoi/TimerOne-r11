@@ -155,8 +155,8 @@ void TimerOne::start()	// AR addition, renamed by Lex to reflect it's actual rol
 	SREG = oldSREG;
   } while (tcnt1==0); 
  
-//  TIFR1 = 0xff;              		// AR - Clear interrupt flags
-//  TIMSK1 = _BV(TOIE1);              // sets the timer overflow interrupt enable bit
+  TIFR1 = 0xff;              		// AR - Clear interrupt flags
+  TIMSK1 = _BV(TOIE1);              // sets the timer overflow interrupt enable bit
 }
 
 void TimerOne::stop()
